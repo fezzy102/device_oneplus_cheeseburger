@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+# apn from marlin
+PRODUCT_COPY_FILES := device/oneplus/cheeseburger/configs/apns-full-conf.xml:system/etc/apns-conf.xml
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -21,14 +24,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from cheeseburger device
 $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 
-# Inherit some common DU stuff.
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+# Inherit some common AQUARIOS stuff.
+$(call inherit-product, vendor/aquarios/products/aquarios_phone.mk)
 
-# Build Launcher3
-PRODUCT_PACKAGES += \
-        Launcher3
-
-PRODUCT_NAME := du_cheeseburger
+PRODUCT_NAME := cheeseburger
 PRODUCT_DEVICE := cheeseburger
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
