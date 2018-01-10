@@ -27,6 +27,8 @@ $(call inherit-product, vendor/aquarios/config/phone-xxhdpi-4096-dalvik-heap.mk)
 $(call inherit-product, vendor/aquarios/config/phone-xxhdpi-2048-hwui-memory.mk)
 $(call inherit-product, vendor/aquarios/config/utils.mk)
 
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
