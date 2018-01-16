@@ -18,5 +18,8 @@
 
     <!-- Whether or not a device has hardware keys -->
     <bool name="has_hwkeys">true</bool>
+    
+    <!-- whether or not a device has extra settings (op3parts) --> 
+    <bool name="has_device_extras">true</bool>
 
 </resources>
