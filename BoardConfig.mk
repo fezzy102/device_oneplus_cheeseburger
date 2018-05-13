@@ -32,3 +32,6 @@ TARGET_OTA_ASSERT_DEVICE := cheeseburger
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+
+# inherit from the proprietary version
+-include vendor/oneplus/cheeseburger/BoardConfigVendor.mk
